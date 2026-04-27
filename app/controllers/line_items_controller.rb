@@ -2,9 +2,10 @@ class LineItemsController < ApplicationController
   include CurrentCart
   include CounterStore
 
-  before_action :set_cart, only: [:create]
-  before_action :reset_counter, only: [:create]
-  before_action :set_line_item, only: %i[ show edit update destroy ]
+  skip_before_action :authorize, only: :create
+  before_action      :set_cart, only: [:create]
+  before_action      :reset_counter, only: [:create]
+  before_action      :set_line_item, only: %i[ show edit update destroy ]
 
   # GET /line_items or /line_items.json
   def index

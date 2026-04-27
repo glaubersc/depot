@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class OrderTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  include ActiveJob::TestHelper
+
+  perform_enquewed_jobs do
+    click_button "Place Order"
+  end
+
 end
