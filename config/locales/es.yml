@@ -29,45 +29,41 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   layouts:
     application:
-      title: "The Pragmatic Bookshelf"
-      home: "Home"
-      questions: "Questions"
-      news: "News"
-      contact: "Contact"
-
+      title: "A biblioteca pragmatica"
+      home: "Início"
+      questions: "Perguntas"
+      news: "Noticias"
+      contact: "Contato"
   store:
     index:
-      title_html: "Your Pragmatic Catalog"
-      add_html: "Add to Cart"
-
+      title_html: "Seu Catálogo de Pragmatic"
+      add_html: "Adicionar ao Carrinho"
   carts:
     cart:
-      title: "Your Cart"
-      empty: "Empty cart"
-      checkout: "Checkout"
-        
+      title: "Carrito de la Compra"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
   number:
     currency:
       format:
-        unit: "$"
+        unit: "$US"
         precision: 2
-        separator: "."
-        delimiter: ","
-        format: "%u%n"
-
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
   orders:
     new:
-     legend: "Please Enter Your Details"
+     legend: "Por favor informe os detalhes"
     form:
-      name: "Name"
-      address_html: "Address"
+      name: "Nome"
+      address_html: "Endereço"
       email: "E-mail"
-      pay_type: "Pay with"
-      pay_prompt_html: "Select a payment method"
-      submit: "Place Order"
+      pay_type: "Pagar com"
+      pay_prompt_html: "Selecione uma forma de pagamento"
+      submit: "Finalizar Compra"
       pay_types:
         check: "Check"
         credit_card: "Credit Card"
@@ -83,10 +79,10 @@ en:
   activerecord:
     errors:
       messages:
-        inclusion: "is not included in the list"
-        blank: "can't be blank"
+        inclusion: "no está incluido en la lista"
+        blank: "no puede quedar en blanco"
       template:
-        body: "There were problems with the following fields:"
+        body: "Hay problemas con los siguientes campos:"
         header:
-          one: "1 error prohibited this %{model} from being saved"
-          other: "%{count} errors prohibited this %{model} from being saved"        
+          one: "1 error ha impedido que este %{model} se guarde"
+          other: "%{count} errores han impedido que este %{model} se guarde"        
